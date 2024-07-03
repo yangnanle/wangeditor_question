@@ -1,5 +1,6 @@
 <template>
   <div style="min-height: 75vh;">
+    <h3>将wangeditor封装起来出现问题，实际需求还是需要封装一下</h3>
     <Editor :value-html="editorHtml" />
   </div>
 </template>

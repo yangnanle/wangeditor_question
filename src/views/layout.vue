@@ -23,7 +23,7 @@ import { ref } from 'vue'
 
 const menus = ref([
   { path: '/python_mammoth', name: '复现问题' },
-  { path: '/mammoth', name: 'mammoth' },
+  { path: '/mammoth', name: '正常' },
 ])
 
 const activeIndex = ref('/python_mammoth')

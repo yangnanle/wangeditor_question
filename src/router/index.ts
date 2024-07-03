@@ -3,6 +3,10 @@ import { createRouter, RouteRecordRaw, createWebHashHistory } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: "/python_mammoth",
+  },
+  {
+    path: '/',
     name: 'layout',
     component: () => import('@/views/layout.vue'),
     children: [
