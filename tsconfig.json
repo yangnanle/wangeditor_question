@@ -1,0 +1,26 @@
+{  
+  "compilerOptions": {  
+    "baseUrl": "./",  
+    "paths": {  
+      "@/*": ["./src/*"]  
+    },  
+    "target": "es6",  
+    "useDefineForClassFields": true,  
+    "module": "ESNext",  // 通常使用 ESNext 以支持最新的 JavaScript 特性  
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],  
+    "skipLibCheck": true,  
+    "types": ["vue", "vue-router"],  
+    "moduleResolution": "Node",  // 通常使用 Node  
+    "allowImportingTsExtensions": true,  
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,  
+    "isolatedModules": true,  
+    "noEmit": true,  
+    "jsx": "preserve",  
+    "strict": true,  
+    "noUnusedLocals": false,  
+    "noUnusedParameters": false,  
+    "noFallthroughCasesInSwitch": true  
+  },  
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "wangeditor-types.d.ts"]  // 注意修正了 include 数组中的文件路径  
+}
