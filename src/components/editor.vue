@@ -8,16 +8,12 @@
 
 <script setup lang="ts">
 import "@wangeditor/editor/dist/css/style.css";
-import type { UploadRequestOptions } from "element-plus"
 import {
   onBeforeUnmount,
   ref,
   shallowRef,
-  onMounted,
   reactive,
-  watch,
 } from "vue";
-import { ElMessage } from "element-plus";
 import { IDomEditor, DomEditor, createEditor, SlateElement } from '@wangeditor/editor';
 // 说明：需要找到editor-for-vue中的package.json文件，exports中添加："types": "./dist/src/index.d.ts"，否则ts会报错，找不到该模块
 import { Editor, Toolbar } from "@wangeditor/editor-for-vue"
@@ -30,7 +26,6 @@ const props = defineProps({
   valueHtml: { type: String, required: true, default: '' },
 });
 
-const htmlValue = ref('')
 const editorRef = shallowRef(); // 编辑器实例，必须用 shallowRef，重要！
 
 const toolbarConfig = ref({

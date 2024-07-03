@@ -22,13 +22,12 @@
 import { ref } from 'vue'
 
 const menus = ref([
-  { path: '/python_mammoth', name: '复现问题' },
-  { path: '/mammoth', name: '正常' },
+  { path: '/questionPage', name: '复现问题' },
+  { path: '/normal', name: '正常' },
 ])
 
-const activeIndex = ref('/python_mammoth')
+const activeIndex = ref('/questionPage')
 const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
   activeIndex.value = key;
 }
 </script>

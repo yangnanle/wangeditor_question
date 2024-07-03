@@ -3,7 +3,7 @@ import { createRouter, RouteRecordRaw, createWebHashHistory } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: "/python_mammoth",
+    redirect: "/questionPage",
   },
   {
     path: '/',
@@ -11,21 +11,20 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/layout.vue'),
     children: [
       {
-        path: '/mammoth',
-        name: 'Mammoth',
-        component: () => import('@/views/mammoth.vue')
+        path: '/normal',
+        name: 'normal',
+        component: () => import('@/views/normal.vue')
       },
       {
-        path: '/python_mammoth',
-        name: 'PythonMammoth',
-        component: () => import('@/views/python_mammoth.vue')
+        path: '/questionPage',
+        name: 'QuestionPage',
+        component: () => import('@/views/questionPage.vue')
       },
     ]
   }
 
 ]
 const router = createRouter({
-  // history: createWebHistory(),
   history: createWebHashHistory(),
   routes,
 });

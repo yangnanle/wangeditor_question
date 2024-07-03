@@ -15,7 +15,6 @@
     "element-plus": "^2.7.6",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
-    "mammoth": "^1.8.0",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0"
   },
