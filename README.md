@@ -15,4 +15,4 @@
 
 在传递时，回车解析成了换行，所以在传递时```.replace(/\n/, '')```，可以完美解决
 
-![alt text](image.png)
+![image](https://github.com/yangnanle/wangeditor_question/assets/151699136/af1ad75f-c923-414a-9b43-778d9ffd44ee)
