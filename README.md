@@ -1,3 +1,5 @@
+> 我将项目放到了stackblitz，大家可以在线调试：https://stackblitz.com/~/github.com/yangnanle/wangeditor_question?file=src/views/normal.vue
+
 # 描述
 项目需求，让docx转html，并在编辑器中展示，这个是使用了mammoth进行了转换，使用wangeditor进行展示
 
@@ -11,8 +13,10 @@
 
 对比的区别：**editor绑定的值，一个是由父组件props传递的，一个是当前模拟接口获取的**
 
-```已经成功解决啦！```在此感谢作者大大
+已经成功解决啦！在此感谢作者大大
 
 在传递时，回车解析成了换行，所以在传递时```.replace(/\n/, '')```，可以完美解决
 
 ![image](https://github.com/yangnanle/wangeditor_question/assets/151699136/af1ad75f-c923-414a-9b43-778d9ffd44ee)
+
+
