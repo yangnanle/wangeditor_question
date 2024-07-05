@@ -22,8 +22,8 @@
 import { ref } from 'vue'
 
 const menus = ref([
-  { path: '/questionPage', name: '复现问题' },
-  { path: '/normal', name: '正常' },
+  { path: '/questionPage', name: 'wangeditor绑定的值通过父组件传递' },
+  { path: '/normal', name: '绑定的值在当前页获取' },
 ])
 
 const activeIndex = ref('/questionPage')

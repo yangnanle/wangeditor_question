@@ -1,13 +1,12 @@
 <template>
   <div style="min-height: 75vh;">
     <h3>将wangeditor封装起来传递html出现问题</h3>
-    <Editor :value-html="editorHtml" />
+    <Editor :value-html.sync="editorHtml" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from "vue";
-import { ElMessage } from "element-plus";
+import { onMounted, ref } from "vue";
 import Editor from '@/components/editor.vue'
 
 const editorHtml = ref('')
@@ -123,7 +122,7 @@ const content = `
 `
 onMounted(() => {
   setTimeout(() => {
-    editorHtml.value = content
+    editorHtml.value = content.replace(/\n/, '')
   }, 1000);
 })
 </script>
