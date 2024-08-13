@@ -1,8 +1,10 @@
-# 问题
-进行切页时，编辑器的撤销会是上一页的内容，不符合项目需求
-
 
 > 我将项目放到了stackblitz，大家可以在线调试：https://stackblitz.com/~/github.com/yangnanle/wangeditor_question?file=src/views/normal.vue
+
+# 问题
+进行切页时，编辑器的撤销会是上一页的内容，不符合项目需求
+# 解决
+每次切页时，销毁重建编辑器
 
 # 描述
 项目需求，让docx转html，并在编辑器中展示，这个是使用了mammoth进行了转换，使用wangeditor进行展示

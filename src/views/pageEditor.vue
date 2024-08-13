@@ -75,17 +75,31 @@ onMounted(() => {
     var content = data.find(item => item.page === currPage.value).content
     valueHtml.value = content
     initEditor()
-  }, 1000);
+  }, 100);
 })
 
 const watchPage = watch(() => currPage.value, (newVal) => {
+  const editor = editorRef.value
+  if (editor == null) return
+  // 不生效
+  // editor.history.undos.length = 0;
+  // editor.history.redos.length = 0;
+  // 每次切换时，销毁重建编辑器
+  editor.destroy()
+  // 模拟请求
   setTimeout(() => {
-    editorRef.value.clear()
+    // 加在这里也不生效
+    // editor.history.undos.length = 0;
+    // editor.history.redos.length = 0;
     // var content = list.find(item => item.page === newVal).content
     var content = data.find(item => item.page === newVal).content
+    if (content) {
+      initEditor()
+    }
+
     // valueHtml.value = content
-    editorRef.value.setHtml(content)
-    originalText.value = editorRef.value.getHtml()
+    // editor.setHtml(content)
+    // originalText.value = editor.getHtml()
   }, 100);
 })
 
@@ -95,7 +109,7 @@ const prevPage = () => {
   }
 }
 const nextPage = () => {
-  if (currPage.value < list?.length) {
+  if (currPage.value < data?.length) {
     currPage.value++
   }
 }
