@@ -22,11 +22,12 @@
 import { ref } from 'vue'
 
 const menus = ref([
+  { path: '/pageEditor', name: '切页获取内容' },
   { path: '/questionPage', name: 'wangeditor绑定的值通过父组件传递' },
   { path: '/normal', name: '绑定的值在当前页获取' },
 ])
 
-const activeIndex = ref('/questionPage')
+const activeIndex = ref('/pageEditor')
 const handleSelect = (key: string, keyPath: string[]) => {
   activeIndex.value = key;
 }

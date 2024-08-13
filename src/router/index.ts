@@ -3,7 +3,7 @@ import { createRouter, RouteRecordRaw, createWebHashHistory } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: "/questionPage",
+    redirect: "/pageEditor",
   },
   {
     path: '/',
@@ -19,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/questionPage',
         name: 'QuestionPage',
         component: () => import('@/views/questionPage.vue')
+      },
+      {
+        path: '/pageEditor',
+        name: 'PageEditor',
+        component: () => import('@/views/pageEditor.vue')
       },
     ]
   }
